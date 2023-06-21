@@ -20,8 +20,9 @@
     width: 620px;
     display: flex;
     flex-direction: row; 
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 25px;
+    box-shadow: 0px 0px 30px lightslategrey;
 }
 
  .your-score-container{
@@ -183,12 +184,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* align-items: center; */
         border: none;
     }
 
     .your-score-container, .summary-container {
-        width: 375px;
+        width: 365px;
     }
 
     .summary-container {
