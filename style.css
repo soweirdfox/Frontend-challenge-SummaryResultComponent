@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+ body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ } 
+
+ .main-container {
+    width: 620px;
+    display: flex;
+    flex-direction: row; 
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+ .your-score-container{
+    width: 310px;
+    height: 450px;
+    border-radius: 25px;
+ }
+
+ .your-score-container{
+    /* float: left; */
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    display: flex;
+
+    
+ }
+
+ .your-score-cont-inside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 50px;
+ }
+
+ .your-result {
+    font-size: 20px;
+    color: hsl(241, 100%, 89%);
+    margin: 30px 0px;
+    font-weight: 700;
+ }
+
+ .scores {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+ }
+
+ .your-score {
+    font-size: 60px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 800;
+ }
+
+ .mark {
+    font-size: 24px;
+    font-weight: 800;
+    color: hsl(0, 0%, 100%);
+    margin: 30px 0px;
+ }
+
+ .score-description, .total-score {
+    font-size: 15px;
+    color: hsl(241, 100%, 89%);
+ }
+
+ .score-description {
+    text-align: center;
+ }
+
+.summary {
+    font-size: 20px;
+    color: hsl(224, 30%, 27%);
+    margin: 30px 0px;
+    font-weight: 700;
+}
+
+.summary-container{
+    width: 280px;
+    margin-left: 30px;
+}
+
+.type-score{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+
+.category {
+    display: flex;
+    flex-direction: row;
+}
+
+.score-name{
+    margin-left: 15px;
+}
+
+.your-amount{
+    font-weight: 800;
+}
+
+.Reaction {
+    background-color: hsla(0, 100%, 67%, 0.05);
+}
+
+.Reaction .category p {
+    color: hsl(0, 100%, 67%);
+}
+
+.Memory {
+    background-color: hsla(39, 100%, 56%, 0.05);
+}
+
+.Memory .category p{
+    color: hsl(39, 100%, 56%);
+}    
+
+.Verbal {
+    background-color: hsla(166, 100%, 37%, 0.05);
+}
+
+.Verbal .category p {
+    color: hsl(166, 100%, 37%);
+}
+
+.Visual {
+    background-color: hsla(234, 85%, 45%, 0.05);
+}
+
+.Visual .category p {
+    color: hsl(234, 85%, 45%);
+}
+
+.Reaction .category p, .Memory .category p, .Verbal .category p, .Visual .category p {
+    font-weight: 700;
+}
+
+.continue-btn {
+    width: 250px;
+    padding: 15px 0px;
+    border-radius: 25px;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    background-color: hsl(224, 30%, 27%);
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+} 
+
+.continue-btn:hover {
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+

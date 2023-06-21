@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="your-score-container">
+            <div class="your-score-cont-inside">
+            <p class="your-result">Your Result</p>
+            <div class="scores">
+                <p class="your-score">76</p>
+                <p class="total-score">of 100</p>
+            </div>
+            <p class="mark">Great</p>
+            <p class="score-description">You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+        </div>
+         <div class="summary-container"> 
+            <p class="summary">Summary</p>
+            <div class="types-score" id="tps-score">
+                <!-- <div class="type-score">
+                    <div class="category">
+                        <img src="./assets/images/icon-reaction.svg" alt="Reaction">
+                        <p class="score-name">Reaction</p>
+                    </div>
+                    <div class="score-amount">
+                        <p class="scores-amount"><span class="your-amount">80</span> / 100</p>
+                    </div>
+                </div> -->
+                <button class="continue-btn" id="btn">Continue</button>
+            </div>
+         </div>
+    </div>
+    <script>
+fetch("data.json")
+  .then((response) => response.json())
+  .then((json) => {
+      for (let i=0; i<json.length; i++){
+        const scoreBlock = document.createElement("div");
+        scoreBlock.classList.add("type-score");
+        scoreBlock.innerHTML = `<div class="category">
+                            <img src="${json[i].icon}" alt="${json[i].category}">
+                            <p class="score-name">${json[i].category}</p>
+                        </div>
+                        <div class="score-amount">
+                            <p class="scores-amount"><span class="your-amount">${json[i].score}</span>  / 100</p>
+                        </div>`
+        scoreBlock.classList.add(`${json[i].category}`);                
+        const scoreContainer = document.getElementById("tps-score");   
+        const button = document.getElementById("btn");
+        scoreContainer.insertBefore(scoreBlock, button);             
+      }
+
+  });
+    </script>
+</body>
+</html>
